@@ -139,7 +139,7 @@
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn-1"> Read more </a>
-                      <a href="" class="btn-2">Get A Quote</a>
+                      <a href="#quoteForm" class="btn-2">Get A Quote</a>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn-1"> Read more </a>
-                      <a href="" class="btn-2">Get A Quote</a>
+                      <a href="#quoteForm" class="btn-2">Get A Quote</a>
                     </div>
                   </div>
                 </div>
@@ -205,9 +205,8 @@
                 From wiring your new home to installing advanced lighting systems, our skilled electricians ensure seamless and reliable 
                 electrical installations tailored to your needs.  
               </p>
-              <a href="">
-                Read More
-              </a>
+              <a href="javascript:void(0);" onclick="openModal('modal1')">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -223,9 +222,8 @@
               <p>
                 Count on us for efficient troubleshooting, panel upgrades, and emergency repairs
                  to keep your electrical systems running smoothly.</p>
-              <a href="">
-                Read More
-              </a>
+                 <a href="javascript:void(0);" onclick="openModal('modal2')">Read More</a>
+             
             </div>
           </div>
         </div>
@@ -241,15 +239,62 @@
               <p>
                 Enhance energy efficiency, improve safety features, and integrate home automation with
                  our modern electrical upgrade services.</p>
-              <a href="">
-                Read More
-              </a>
+                 <a href="javascript:void(0);" onclick="openModal('modal3')">Read More</a>
+               
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
+
+
+   <!-- Modals -->
+   <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Expert Installations</h2>
+      <p>We provide expert electrical installations for residential and commercial projects. Our team ensures high-quality workmanship and compliance with all safety standards. Whether it's installing new lighting systems, wiring a new building, or upgrading your existing electrical setup, we guarantee reliable and efficient service.
+
+        Our skilled electricians are trained in the latest technologies, allowing us to handle even the most complex challenges. We offer services including smart home automation, energy-efficient solutions, and emergency repairs.
+        
+        <br>We work closely with clients to minimize disruption and provide clear communication and detailed estimates.
+        
+        Safety is our top priority. We adhere to the highest industry standards and use only the best materials. Our team conducts thorough inspections to ensure all installations are secure and functioning optimally.</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Electrical Repairs</h2>
+      <p>Our skilled electricians are ready to handle all your electrical repair needs. We specialize in troubleshooting electrical issues, performing panel upgrades, and providing emergency repair services. Our goal is to ensure your electrical systems are safe and functioning properly.
+<br>
+We pride ourselves on quick response times and efficient service, minimizing downtime and inconvenience for you. Our team uses advanced diagnostic tools to accurately identify and resolve problems, ensuring long-lasting solutions. We also offer routine maintenance to prevent future issues and extend the lifespan of your electrical systems.
+<br>
+Customer satisfaction is at the heart of what we do.</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Electrical Upgrades</h2>
+      <p>Upgrade your electrical systems with our professional services. We offer a comprehensive range of enhancements designed to improve energy efficiency, integrate cutting-edge smart home technologies, and enhance overall safety. Whether you're looking to optimize your electrical setup for efficiency, integrate advanced automation features, or ensure your systems meet the latest safety standards, our experienced team is here to help.
+<br>
+        We begin by collaborating closely with you to understand your specific needs and preferences. From there, we craft customized solutions that not only meet but exceed your expectations. Our commitment to excellence means we utilize the latest industry innovations and techniques to ensure your electrical systems are not only functional but also future-proof.
+        <br>
+        Whether it's upgrading lighting fixtures to energy-efficient LEDs, installing smart thermostats for climate control, or upgrading electrical panels for increased capacity and reliability, our skilled professionals deliver exceptional results. .</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
   <!-- end service section -->
 
@@ -279,10 +324,18 @@
             <p>
               Electrolink aims to be a trusted leader in the electrical industry, known for innovation, exceptional service, and quality craftsmanship. We strive to build lasting relationships based on trust and integrity, empowering our clients with reliable solutions
                that enhance their comfort, productivity, and safety.</p>
-            <div class="btn-box">
-              <a href="">
-                Read More
-              </a>
+               <div class="hidden-content" style="display: none;">
+                <p>
+                  At Electrolink, we believe in empowering our clients with reliable solutions that enhance their comfort, productivity, and safety. Whether it's upgrading your electrical systems for improved efficiency, integrating smart technologies for convenience, or ensuring compliance with the latest safety regulations, we approach each project with meticulous attention to detail and a focus on delivering superior results.<br>
+                <br>
+                Our proactive approach to innovation means we stay at the forefront of technological advancements and best practices in the industry. By leveraging our expertise and experience, we provide tailored solutions that not only meet but anticipate the evolving needs of our clients.<br>
+                Choose Electrolink for your next electrical project and discover the difference our commitment to innovation, exceptional service, and quality craftsmanship can make. Partner with us to experience peace of mind and confidence in knowing your electrical systems are in capable hands.<br>
+                </p>
+              </div>
+              <div class="btn-box">
+                <a href="#" onclick="toggleHiddenContent(event)">Read More</a>
+                
+              
             </div>
           </div>
         </div>
@@ -301,7 +354,7 @@
         <h2>
           You construct a dream. We will construct them to reality
         </h2>
-        <a href="">
+        <a href="#quoteForm">
           Get A Qoute
         </a>
       </div>
@@ -393,7 +446,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4 mx-auto">
-          <div class="box">
+          <div  class="box slide-in top">
             <div class="img-box">
               <img src="images/b1.jpg" alt="">
             </div>
@@ -402,11 +455,10 @@
                 21 December 2020
               </h6>
               <h5>
-                Optio exercitationem vitae quas quos
+                Ensuring Success in Commercial Electrical Contracts
               </h5>
               <p>
-                Dicta nobis, aperiam fugiat ea, vitae aliquid unde quidem soluta provident enim harum aliquam veniam Delian veritatis, voluptates perspiciatis
-              </p>
+                Commercial electrical projects come with their own set of challenges and contractual nuances. In this blog post, we explore essential factors to consider when drafting and signing commercial electrical contracts, from compliance with industry standards to managing large-scale installations. Discover best practices for collaboration and communication to achieve a successful project outcome              </p>
               <a href="">
                 Read More
               </a>
@@ -414,7 +466,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mx-auto">
-          <div class="box">
+          <div class="box slide-in bottom">
             <div class="img-box">
               <img src="images/b2.jpg" alt="">
             </div>
@@ -423,11 +475,9 @@
                 21 December 2020
               </h6>
               <h5>
-                Quidem placeat vitae aliquid quo sunt
-              </h5>
+                Key Considerations for Residential Electrical Contracts              </h5>
               <p>
-                Dicta nobis, aperiam fugiat ea, vitae aliquid unde quidem soluta provident enim harum aliquam veniam Delian veritatis, voluptates perspiciatis
-              </p>
+                When planning an electrical project for your home, knowing what to expect from your building contract can save you time and money. This article covers the critical elements of residential electrical contracts, including scope of work, timelines, and cost estimates. Learn how to negotiate terms that protect your interests and ensure quality workmanship.              </p>
               <a href="">
                 Read More
               </a>
@@ -435,7 +485,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mx-auto">
-          <div class="box">
+          <div class="box slide-in top">
             <div class="img-box">
               <img src="images/b3.jpg" alt="">
             </div>
@@ -444,11 +494,9 @@
                 21 December 2020
               </h6>
               <h5>
-                Dolores vel maiores voluptatem enim
-              </h5>
+                Navigating Building Contracts: Residential vs. Commercial Electrical Projects              </h5>
               <p>
-                Dicta nobis, aperiam fugiat ea, vitae aliquid unde quidem soluta provident enim harum aliquam veniam Delian veritatis, voluptates perspiciatis
-              </p>
+                Understanding the intricacies of building contracts is essential for both homeowners and business owners embarking on electrical projects. In this blog post, we delve into the key differences between residential and commercial electrical contracts, what to look out for, and how to ensure your project runs smoothly from start to finish. Gain insights from industry experts to make informed decisions and avoid common pitfalls in your next electrical endeavor              </p>
               <a href="">
                 Read More
               </a>
@@ -460,6 +508,34 @@
   </section>
 
   <!-- end blog section -->
+
+  <section id="quoteForm" class="quote-form-section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>Get a Quote</h2>
+        </div>
+        <form id="QuoteForm" action="/submitQuote" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Your Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit"  id="submitButton">Request Quote</button>
+        </form>
+    </div>
+</section>
+
 
   <!-- info section -->
   <section class="info_section ">
@@ -545,16 +621,16 @@
               </button>
             </form>
             <div class="social_box">
-              <a href="">
+              <a href="https://facebook.com/">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="https://twitter.com/">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="https://youtube.com/">
                 <i class="fa fa-youtube" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>

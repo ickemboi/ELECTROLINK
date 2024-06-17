@@ -3,9 +3,21 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const path = require('path');
 const app = express();
+const cors = require('cors');
+const session = require('express-session');
 const PORT = process.env.PORT || 3000; // Use port 3000 unless there is a preconfigured port
 
 app.use(bodyParser.json());
+// Middleware setup
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors()); // Add CORS middleware
+
+app.use(session({
+    secret: '123asdfghjdfvbn', 
+    resave: false,
+    saveUninitialized: true
+}));
 
 // Serve static files (HTML, CSS, JS, images, etc.) from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -48,8 +60,30 @@ app.post('/subscribe', (req, res) => {
   });
 });
 
+
+app.use(express.static('public'));
+
 // Serve static files
 app.use(express.static('public'));
+
+
+// Route for quote submmission
+app.post('/submitQuote', (req, res) => {
+  const { name, email, phone, message} = req.body;
+  const sql = 'INSERT INTO quotes (name, email, phone, message) VALUES (?, ?, ?, ?)';
+  db.query(sql, [name, email, phone,message], (err, result) => {
+      if (err) {
+         return res.status(500).send('Quote request failed!!');
+        }
+      res.send('Quote request submited!');
+  });
+});
+
+
+
+
+
+
 
 // Start the server
 app.listen(PORT, () => {
