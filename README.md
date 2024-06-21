@@ -1,6 +1,6 @@
-# Electrician Website
+# Electrolink Website
 
-Welcome to the Electrician Website repository! This project aims to provide a user-friendly platform where users can browse content presented by electricians and directly get quotes for electrical services.
+Welcome to the Electrolink repository! This project aims to provide a user-friendly platform where users can browse content presented by electricians and directly get quotes for electrical services.
 
 ## Features
 
