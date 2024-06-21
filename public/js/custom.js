@@ -169,3 +169,41 @@ function openModal(modalId) {
         readMoreLink.textContent = 'Read More';
     }
 }
+
+//for registratopn form
+document.getElementById('registerForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const response = await fetch('/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password })
+  });
+
+  const data = await response.text();
+  alert(data);
+});
+
+//for login form
+document.getElementById('loginForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const response = await fetch('/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  });
+
+  const data = await response.json();
+  if (data.token) {
+    localStorage.setItem('token', data.token);
+    alert('Login successful');
+  } else {
+    alert('Login failed');
+  }
+});
